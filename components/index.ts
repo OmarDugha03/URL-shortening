@@ -1,0 +1,8 @@
+export {default as NavBar} from "./NavBar"
+export {default as Hero} from "./Hero"
+export {default as Shorting} from "./Shorting"
+export {default as Input} from "./Input"
+export {default as Advanced} from "./Advanced"
+export {default as Cards} from "./Cards"
+export {default as Footer} from "./Footer"
+export {default as CTA} from "./CTA"
