@@ -27,22 +27,20 @@ const NavBar: FC<NavBarProps> = ({}) => {
             </Link>
           ))}
           <div className='flex w-[90%] flex-col items-center justify-center '>
-            {status === 'unauthenticated' ? (
-              <Link href='/login' className='my-5'>
-                log in{' '}
-              </Link>
-            ) : (
-              <div className='mx-4 flex items-center px-2'>
-                <button onClick={() => {}}>log out </button>
-                <Image
-                  width={28}
-                  height={28}
-                  className='ml-6 rounded-full'
-                  src={avatar}
-                  alt='avatar'
-                />
-              </div>
-            )}
+            <Link href='/login' className='my-5'>
+              log in{' '}
+            </Link>
+            {/* 
+            <div className='mx-4 flex items-center px-2'>
+              <button onClick={() => {}}>log out </button>
+              <Image
+                width={28}
+                height={28}
+                className='ml-6 rounded-full'
+                src={avatar}
+                alt='avatar'
+              />
+            </div> */}
           </div>
         </div>
       </nav>
