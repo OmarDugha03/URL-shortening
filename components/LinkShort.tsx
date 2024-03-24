@@ -11,7 +11,7 @@ type Link = {
 }
 const getLinks = async () => {
   try {
-    const res = await fetch('http://localhost:3000/api/link', {
+    const res = await fetch(`${process.env.URL}/api/link`, {
       cache: 'no-store'
     })
     if (!res.ok) {

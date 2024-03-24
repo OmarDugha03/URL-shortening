@@ -1,31 +1,32 @@
-"use client";
-import { useRouter } from "next/navigation";
+'use client'
+import { useRouter } from 'next/navigation'
 type links = {
-  id: string;
-};
+  id: string
+}
 const DeleteLink = ({ id }: links) => {
-  const router = useRouter();
+  const router = useRouter()
   const deleteLink = async () => {
     try {
-      const res = await fetch(`http://localhost:3000/api/link?id=${id}`, {
-        method: "DELETE",
-      });
+      const res = await fetch(`${process.env.URL}/api/link?id=${id}`, {
+        method: 'DELETE'
+      })
       if (res.ok) {
-        router.refresh();
+        router.refresh()
       }
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
-  };
+  }
   return (
     <div key={id}>
       <button
         onClick={deleteLink}
-        className="w-20 h-12 text-white bg-red-500 rounded-lg">
+        className='h-12 w-20 rounded-lg bg-red-500 text-white'
+      >
         Delete
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default DeleteLink;
+export default DeleteLink
