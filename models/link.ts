@@ -1,4 +1,4 @@
-import mongoose, { models, Schema } from "mongoose"
+import mongoose, { models, Schema } from 'mongoose'
 
 const linkSchema = new Schema(
   {
@@ -7,12 +7,12 @@ const linkSchema = new Schema(
       require: true,
       author: {
         type: Schema.Types.ObjectId,
-        ref: "User",
-      },
-    },
+        ref: 'User'
+      }
+    }
   },
   { timestamps: true }
 )
 
-const Short = models.Short || mongoose.model("Short", linkSchema)
+const Short = models.Short || mongoose.model('Short', linkSchema)
 export default Short
