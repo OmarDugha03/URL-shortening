@@ -23,7 +23,7 @@ const Linkinputs = ({}) => {
       return
     }
     try {
-      const res = await fetch('http://localhost:3000/api/link', {
+      const res = await fetch(`${process.env.URL}/api/link`, {
         method: 'POST',
         headers: {
           'Content-type': 'application/json'
